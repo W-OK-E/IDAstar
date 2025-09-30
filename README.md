@@ -47,14 +47,14 @@ source install/setup.bash
 
 ## Running the Planner
 
-Launch the map server with your map:
+Launch the map:
 ```bash
 ros2 launch path map_launch.py
 ```
 
 Launch the IDA* planner node:
 ```bash
-ros2 run ida_star_planner ida_star_planner_node
+ros2 run cruise cruise
 ```
 
 ## Visualize in Rviz:
