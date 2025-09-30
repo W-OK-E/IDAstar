@@ -28,6 +28,7 @@ cd ~/ros2_ws/src
 ## Clone this repository in the root of the workspace
 
 ```bash
+git clone https://github.com/W-OK-E/IDAstar.git
 ```
 
 ## Building the package
