@@ -65,6 +65,7 @@ rviz2
 #### You should see the robot, the occupancy grid map, and the planned path.
 
 Package Structure
+```bash
 src/
 ├── cruise/    #Package responsible for path planning 
     |── src/                      # Source file for IDAstar                   
@@ -75,6 +76,7 @@ src/
     ├── maps/                      # Example maps
     ├── CMakeLists.txt          #Cmake config files
     └── package.xml         #Xml specifying package requirements and structure
+```
 
 ## Notes
 
