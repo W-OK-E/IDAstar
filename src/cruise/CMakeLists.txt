@@ -13,6 +13,8 @@ find_package(geometry_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
 
 add_executable(cruise src/ida.cpp)
+add_executable(dynamic_map_publisher src/dynamic_maps.cpp)
+
 
 ament_target_dependencies(cruise
   rclcpp
@@ -21,8 +23,16 @@ ament_target_dependencies(cruise
   visualization_msgs
 )
 
+ament_target_dependencies(dynamic_map_publisher
+  rclcpp
+  nav_msgs
+  geometry_msgs
+)
+
 install(TARGETS
   cruise
+  dynamic_map_publisher
   DESTINATION lib/${PROJECT_NAME})
+
 
 ament_package()

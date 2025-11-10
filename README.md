@@ -1,12 +1,30 @@
 # IDA* Path Planner (ROS 2)
 
-This package implements an Iterative Deepening A* (IDA*) path planner for grid-based environments in ROS 2.  
+<video width="600" controls>
+  <source src="assets/IDAStar.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+This repo implements an Iterative Deepening A* (IDA*) path planner for grid-based environments in ROS 2 and simple png mazes in OpenCV.  
 It integrates with the ROS 2 Navigation Stack (Nav2) and works with occupancy grid maps provided by the Map Server.  
 The planner computes a path from a given start pose to a goal pose while avoiding obstacles.
 
 ---
+## Clone this repository
 
-## Requirements
+```bash
+git clone --recursive https://github.com/W-OK-E/IDAstar.git
+```
+
+## Simple OpenCV funcationality
+You can get started immediately with the `opencv_utils/run_planner.py` script:
+```bash
+ python3 opencv_utils/run_planner.py --visualize --size 20 --seed 10 --resolution 1 
+```
+
+## ROS2 Setup
+
+### Requirements
 
 - **ROS 2 Humble** (or your ROS 2 distro)
 - **colcon** build system
@@ -15,7 +33,7 @@ The planner computes a path from a given start pose to a goal pose while avoidin
 
 ---
 
-## Workspace Setup
+### Workspace Setup
 
 First, create a new ROS 2 workspace if you don’t already have one:
 
@@ -25,12 +43,20 @@ mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 ```
 
-## Clone this repository in the root of the workspace
+### Clone this repository in the root of the workspace
 
 ```bash
-git clone https://github.com/W-OK-E/IDAstar.git
+git clone --recursive https://github.com/W-OK-E/IDAstar.git
 ```
 
+# ROS2 Setup
+This can only be run on Ubuntu 22.04 and ros humble, install the following packages
+```bash
+sudo apt install ros-humble-turtlebot3-msgs
+sudo apt install ros-humble-nav2-bringup ros-humble-turtlebot3-gazebo
+sudo apt install ros-humble-hls-lfcd-lds-drive
+
+```
 ## Building the package
 
 Navigate to the root of the workspace and build:
